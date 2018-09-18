@@ -1,0 +1,22 @@
+{
+  "name": "dynamo-ttl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjulian-360/dynamo-ttl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjulian-360/dynamo-ttl/issues"
+  },
+  "homepage": "https://github.com/cjulian-360/dynamo-ttl#readme",
+  "dependencies": {
+    "aws-sdk": "^2.316.0"
+  }
+}
