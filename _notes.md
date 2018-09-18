@@ -183,4 +183,8 @@ determines `timeToLiveInSeconds` and `expirationDate` values in vicky-spreadshee
 
 
 ## expiry
-- at regular intervals orca scans dynamo table for expired records
+- at regular intervals orca scans dynamo table for expired records (expirationDate < currentDate)
+- deletes files from s3
+- updates status of expired spreadsheets to 'EXPIRED'
+- publishes a status update message (rabbit)
+- vicky picks up status update message, sees 'EXPIRED' status and deletes the spreadsheet
