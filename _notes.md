@@ -5,6 +5,12 @@
 ```
 // list all items in table
 aws dynamodb scan --table-name vicky-uat-spreadsheet --endpoint-url http://localhost:8000
+
+// query for item with specific ID
+aws dynamodb query --table-name orca-uat-spreadsheet \
+    --key-condition-expression "id = :id" \
+    --expression-attribute-values '{ ":id" : { "S": "1f8c9489-be02-42a2-80be-64ce234c9235" } }'  \
+    --endpoint-url https://dynamodb.us-east-1.amazonaws.com
 ```
 
 ## CONFIG
